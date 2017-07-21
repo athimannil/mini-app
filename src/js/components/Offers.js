@@ -2,25 +2,20 @@ import React from 'react';
 
 export class Offers extends React.Component {
 	render () {
+		const {data} = this.props;
+		const offersList = data
+			.map(offerDetail => {
+				return (
+					<div className="offer" key={offerDetail.id}>
+						<h2>{offerDetail.title}</h2>
+						<p>{offerDetail.city}</p>
+					</div>
+				);
+			});
 		return(
 			<main>
 				<div className="container">
-					<div className="offer">
-						<h2>Title</h2>
-						<p>Location Name</p>
-					</div>
-					<div className="offer">
-						<h2>Title</h2>
-						<p>Location Name</p>
-					</div>
-					<div className="offer">
-						<h2>Title</h2>
-						<p>Location Name</p>
-					</div>
-					<div className="offer">
-						<h2>Title</h2>
-						<p>Location Name</p>
-					</div>
+					{offersList}
 				</div>
 			</main>
 		);
