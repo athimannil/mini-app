@@ -7,8 +7,8 @@ export class Offers extends React.Component {
 			.map(offerDetail => {
 				return (
 					<div className="offer" key={offerDetail.id}>
-						<h2>{offerDetail.title}</h2>
-						<p><i className="location-icon"></i> {offerDetail.city}</p>
+						<h2 className="offer-title">{offerDetail.title}</h2>
+						<p className="offer-location"><i className="location-icon"></i> {offerDetail.city}</p>
 					</div>
 				);
 			});
