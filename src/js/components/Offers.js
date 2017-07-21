@@ -8,7 +8,7 @@ export class Offers extends React.Component {
 				return (
 					<div className="offer" key={offerDetail.id}>
 						<h2>{offerDetail.title}</h2>
-						<p>{offerDetail.city}</p>
+						<p><i className="location-icon"></i> {offerDetail.city}</p>
 					</div>
 				);
 			});
