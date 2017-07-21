@@ -4,7 +4,9 @@ export class Header extends React.Component {
 	render(){
 		return(
 			<header>
-				<h1>Mini App</h1>
+				<div className="container">
+					<h1>Mini App</h1>
+				</div>
 			</header>
 		);
 	}
