@@ -18,7 +18,7 @@ export class Offers extends React.Component {
 		return(
 			<main>
 				<div className="container">
-					{offersList}
+					{ offersList.length ? offersList : <h3 className='no-result'>Oops, we currently do not have any places that match your search.</h3>}
 				</div>
 			</main>
 		);
