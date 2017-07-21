@@ -2,8 +2,11 @@ import React from 'react';
 
 export class Offers extends React.Component {
 	render () {
-		const {data} = this.props;
+		const { data, searchText } = this.props;
 		const offersList = data
+			.filter(offerDetail => {
+				return offerDetail.city.toLowerCase().indexOf(searchText.toLowerCase()) >= 0;
+			})
 			.map(offerDetail => {
 				return (
 					<div className="offer" key={offerDetail.id}>
