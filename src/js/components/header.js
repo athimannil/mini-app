@@ -1,6 +1,16 @@
 import React from 'react';
 
 export class Header extends React.Component {
+	constructor(props){
+		super(props);
+		this.state = {color: '#3C454B'};
+	}
+
+	handleColor(event) {
+		this.setState({color: event.target.value});
+		document.documentElement.style.setProperty('--base',this.state.color);
+	}
+
 	render(){
 		return(
 			<header>
@@ -10,6 +20,8 @@ export class Header extends React.Component {
 						<span>Change theme </span>
 						<input
 							type="color"
+							defaultValue={this.state.color}
+							onChange={(e) => this.handleColor(e)}
 						/>
 					</div>
 				</div>

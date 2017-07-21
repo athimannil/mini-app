@@ -14,7 +14,7 @@
   width: 12px;
   height: 12px;
   border-radius: 100% 0% 55% 50% / 55% 0% 100% 50%;
-  background: $primary;
+  background: var(--base);
   transform: rotate(135deg);
 	position: relative;
 	&:after{
