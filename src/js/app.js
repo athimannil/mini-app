@@ -4,6 +4,7 @@ import React from 'react';
 import { render } from 'react-dom';
 
 import { Header } from './components/Header';
+import { Filter } from './components/Filter';
 import { Offers } from './components/Offers';
 import { Footer } from './components/Footer';
 
@@ -14,6 +15,7 @@ class App extends React.Component {
 		return(
 			<div className="app-wrap">
 				<Header/>
+				<Filter/>
 				<Offers
 					data={data}
 				/>
