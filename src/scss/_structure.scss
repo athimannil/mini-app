@@ -9,6 +9,8 @@ html{
 body{
   margin: 0;
   height: 100vh;
+	color: $basic-font-color;
+	background-color: $body-bg;
 }
 
 .app-wrap{
